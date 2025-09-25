@@ -1,0 +1,11 @@
+/*
+*type selector: we use the name of an element to select 
+*all of the same type of elements 
+*/
+p{
+    background-color: aqua;
+    border: 6px
+    border-style: solid;
+    width: fit-content;
+    padding: 30px
+}
