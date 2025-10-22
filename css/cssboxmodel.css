@@ -1,3 +1,5 @@
+
+
 /*
 *type selector: we use the name of an element to select 
 *all of the same type of elements 
@@ -5,7 +7,26 @@
 p{
     background-color: aqua;
     border: 6px
-    border-style: solid;
+    border-style : solid;
+    /*By default, width and height properties define the size of the content box*/
     width: fit-content;
+    height: fit-content;
+    /*Controls the space between the border and the content box*/ 
     padding: 30px
+    padding-top: 200px
+    /**Es para controlar el espacio entre este elemnto con otros*/
+    margin: 20px
+}
+
+h2 {
+    text-align: justify;
+    text-shadow: 5px;
+    border: 6px;
+    border-style: solid;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: aquamarine;
+
 }
