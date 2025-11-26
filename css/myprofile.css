@@ -1,72 +1,99 @@
+/* --------------------------- */
+/* 1️⃣ VARIABLES GLOBALES */
+/* --------------------------- */
+:root {
+    --main-border: 2px solid rgb(0, 16, 2);
+    --highlight-color: bisque;
+    --section-border: 2px solid rgb(210, 199, 155);
+    --font-family: fantasy;
+}
+
+/* --------------------------- */
+/* 2️⃣ ESTILO GLOBAL */
+/* --------------------------- */
 * {
-    font-family: fantasy;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-    border: 2px solid rgb(0, 16, 2);
+    border: var(--main-border);
 }
 
 body {
     border: 2px dashed rgb(0, 16, 2);
-    /* width: 100%; */
 }
 
+/* --------------------------- */
+/* 3️⃣ CABECERA */
+/* --------------------------- */
 header {
     border: 2px dashed rgb(0, 16, 2);
     text-align: center;
     font-size: large;
-    background-color: bisque;
+    background-color: var(--highlight-color);
+    padding: 10px;
 }
 
-/* . is class selector, it allows us to select all tags with the same 
-class value */
+/* --------------------------- */
+/* 4️⃣ SECCIÓN ABOUT ME */
+/* --------------------------- */
 .small-profile-img {
     border: 3px dashed rgb(0, 16, 2);
     border-radius: 50%;
     width: 20%;
 }
 
+/* Nuevo contenedor flex para las columnas */
+.about-me-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
 .about-me-column-2 {
-    width: 40%;
-    /* make all the elements inside a container float to the left forming 
-    a line */
-    float: left;
+    flex: 1 1 40%;
     height: 600px;
     border: 8px dashed black;
     border-radius: 3%;
-    /* create space between elements */
     margin: 10px;
-    /* create space between an element and its border */
     padding: 15px;
+    background-color: #f9f9f9;
 }
 
-/* > is used to select children of a parent element, in this 
-case, the parent element is "section" while the children is all 
-its "h1" child */
-section>h1 {
+section > h1 {
     background-color: beige;
     text-align: center;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-/* # + id of an element to select a unique element
-# is css id selector */
 #about-me-column-21 {
     background-color: rgb(112, 112, 83);
+    color: white;
 }
 
 #about-me-column-22 {
-    background: url(../images/carreteras-convencionales.jpg);
-    background-size: cover;
-    background-position: center;
+    background: url("../images/carreteras-convencionales.jpg") center/cover no-repeat;
 }
 
-section{
-    /* Remove the effects caused by "float" from other elements */
-    clear: both;
+/* --------------------------- */
+/* 5️⃣ PROYECTOS */
+/* --------------------------- */
+#projects-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 10px;
 }
-.myprojects-column-4{
-    width: 22%;
-    float: left;
+
+.myprojects-column-4 {
+    flex: 1 1 22%;
     background-color: rgb(112, 223, 223);
     padding: 10px;
     border: 3px solid black;
@@ -74,69 +101,73 @@ section{
     height: 200px;
     text-align: center;
     margin: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.proj1{
-    background: url(..//images/images.jpg);
+.myprojects-column-4:hover {
+    transform: scale(1.05);
+}
+
+.proj1 {
+    background: url("../images/images.jpg") center/cover no-repeat;
+    opacity: 0.7;
+}
+
+/* Efecto visual en los proyectos impares */
+#projects-section > div:nth-child(odd)::before {
+    background-image: url("../images/photo-1533450718592-29d45635f0a9.jpg");
     background-size: cover;
-    background-position: center;
-    opacity: 0.4;
+    position: absolute;
+    inset: 0;
+    opacity: 0.2;
+    content: "";
+    z-index: 0;
 }
 
-footer{
+#projects-section > div:nth-child(odd) {
+    position: relative;
+    z-index: 1;
+}
+
+/* --------------------------- */
+/* 6️⃣ EXPERIENCIA */
+/* --------------------------- */
+section {
+    border: var(--section-border);
+    margin: 3px;
+    padding: 10px;
     clear: both;
 }
-.footer-icon-style{
-    width: 30px;
-    height: 30px;
-}
-section{
-    border: 2px solid rgb(210, 199, 155);
-    margin: 3px;
-}
-#experience-section>table{
+
+#experience-section table {
     width: 100%;
-    /* padding-left: 100px; */
-   
-    padding-top: 50px;
-    padding-bottom: 40px;
-    
-    /* make the children borders collapse */
     border-collapse: collapse;
+    margin-top: 20px;
 }
-#experience-section>table>tr, td{
-    padding: 40px;
+
+#experience-section td {
+    padding: 20px;
     border: 2px solid rgb(109, 147, 152);
-    /* border-collapse: collapse; */
 }
-/* :nth-child(odd) is used to select all odd children elements of a type */
-/* :nth-child(even) is used to select all even children elements of a type */
-tr:nth-child(even){
+
+#experience-section tr:nth-child(even) {
     background-color: rgb(148, 246, 211);
 }
-/* table, tr, td{
-     border: 1px solid rgb(109, 147, 152);
-} */
 
-
-/* The ::before pseudo-element is an inline box generated as an immediate child 
-of the element it is associated with, or the "originating element". 
-It is often used to add cosmetic content to an element via the content property, 
-such as icons, quote marks, or other decoration. 
-We use this command to create a child element as the parent element's first child */
-#projects-section>div:nth-child(odd)::before {
-	background-image: url('../images/photo-1533450718592-29d45635f0a9.jpg');
-	background-size: cover;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
-	opacity: 0.2;
-    /* It is necessary to put an empty content */
-    content: "";
+/* --------------------------- */
+/* 7️⃣ FOOTER */
+/* --------------------------- */
+footer {
+    clear: both;
+    text-align: center;
+    padding: 20px;
+    background-color: #f3f3f3;
 }
 
-#projects-section>div:nth-child(odd) {
-	position: relative;
+.footer-icon-style {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
 }

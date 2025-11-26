@@ -1,71 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/myprofile.css">
-    <title>My Profile</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/myprofile.css" />
+    <title>My Profile - Pablo Corral</title>
 </head>
 <body>
+    <!-- ===================== -->
+    <!-- HEADER -->
+    <!-- ===================== -->
     <header>
-        <img src="images.jpg" alt="Profile image">
+        <img src="../images/profile.jpg" alt="Profile image of Pablo Corral" class="small-profile-img" />
         <h1>Pablo Corral</h1>
-        <h2>La mejor empresa</h2>
+        <h2>Innovación y Tecnología al Servicio del Futuro</h2>
     </header>
 
     <main>
-        <!-- Sección About Me -->
-        <section class="projects-section">
-            <h1>About me</h1>
+        <!-- ===================== -->
+        <!-- ABOUT ME SECTION -->
+        <!-- ===================== -->
+        <section id="about-me-section">
+            <h1>About Me</h1>
 
-            <div class="about-me-column-2" id="about-me-column-21">
-                <p>Este es el texto de ejemplo sobre mí. Puedes escribir aquí una breve descripción.</p>
-                <p>Me gusta aprender y trabajar en proyectos innovadores.</p>
-            </div>
+            <div class="about-me-container">
+                <div class="about-me-column-2" id="about-me-column-21">
+                    <p>
+                        Soy <strong>Pablo Corral</strong>, un apasionado desarrollador con interés en la tecnología,
+                        el diseño y la innovación. Me gusta crear soluciones funcionales y estéticas.
+                    </p>
+                    <p>
+                        Trabajo con herramientas modernas y disfruto colaborar en equipos multidisciplinarios.
+                        Siempre busco mejorar mis habilidades y aprender nuevas tecnologías.
+                    </p>
+                </div>
 
-            <div class="about-me-column-2" id="about-me-column-22">
-                <p>Otra columna con información adicional.</p>
+                <div class="about-me-column-2" id="about-me-column-22">
+                    <p>
+                        Cuando no estoy programando, disfruto de la fotografía, los viajes por carretera y la música.
+                    </p>
+                    <p>
+                        Creo que la creatividad y la lógica son dos caras de la misma moneda, y ambas son esenciales
+                        para el desarrollo profesional y personal.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- Sección My Projects -->
-        <section class="projects-section">
+        <!-- ===================== -->
+        <!-- PROJECTS SECTION -->
+        <!-- ===================== -->
+        <section id="projects-section">
             <h1>My Projects</h1>
 
+            <!-- PROYECTOS 1–8 -->
             <div class="myprojects-column-4 proj1">
-                <h2><a href="/">Space Expeditions</a></h2>
-                <p>Proyecto sobre exploración espacial.</p>
+                <h2><a href="/" target="_blank" rel="noopener">Space Expeditions</a></h2>
+                <p>Exploración espacial con visualización 3D.</p>
+                <img src="../images/project1.jpg" alt="Space Expeditions project" class="project-img" />
             </div>
 
             <div class="myprojects-column-4">
-                <h2><a href="/">Game Developments</a></h2>
-                <p>Creación de videojuegos y simulaciones.</p>
+                <h2><a href="/" target="_blank" rel="noopener">Game Developments</a></h2>
+                <p>Creación de videojuegos y simulaciones interactivas.</p>
+                <img src="images/photo-1446776811953-b23d57bd21aa.jpg"Game Development project class="project-img" />
             </div>
 
             <div class="myprojects-column-4">
-                <p>Otro proyecto interesante...</p>
+                <h2><a href="/" target="_blank" rel="noopener">AI Chat Assistant</a></h2>
+                <p>Asistente virtual basado en IA para empresas.</p>
+                <img src="images/Las-imagenes-raw-son-los-negativos-digitales.jpg" alt="AI Chat Assistant" class="project-img" />
             </div>
 
             <div class="myprojects-column-4">
-                <p>Más contenido de proyectos...</p>
+                <h2><a href="/" target="_blank" rel="noopener">EcoSmart Homes</a></h2>
+                <p>Automatización inteligente para hogares sostenibles.</p>
+                <img src="images/photo-1677442136019-21780ecad995.jpg" alt="EcoSmart Homes project" class="project-img" />
+            </div>
+
+            <div class="myprojects-column-4">
+                <h2><a href="/" target="_blank" rel="noopener">Data Visualization Dashboard</a></h2>
+                <p>Dashboard interactivo con gráficos y análisis de datos.</p>
+                <img src="images/photo-1556761175-5973dc0f32e7.jpg" alt="Data Visualization Dashboard" class="project-img" />
+            </div>
+
+            <div class="myprojects-column-4">
+                <h2><a href="/" target="_blank" rel="noopener">Mobile Health App</a></h2>
+                <p>Aplicación móvil para seguimiento de hábitos saludables.</p>
+                <img src="images/photo-1498050108023-c5249f4df085.jpg" alt="Mobile Health App" class="project-img" />
+            </div>
+
+            <div class="myprojects-column-4">
+                <h2><a href="/" target="_blank" rel="noopener">Portfolio Builder</a></h2>
+                <p>Generador de portafolios profesionales online.</p>
+                <img src="images/photo-1555949963-aa79dcee981c.jpg" alt="Portfolio Builder" class="project-img" />
+            </div>
+
+            <div class="myprojects-column-4">
+                <h2><a href="/" target="_blank" rel="noopener">Smart City Simulation</a></h2>
+                <p>Modelo urbano de tráfico y energía basado en IA.</p>
+                <img src="images/photo-1518770660439-4636190af475.jpg
+                " alt="Smart City Simulation" class="project-img" />
             </div>
         </section>
     </main>
 
+    <!-- ===================== -->
+    <!-- FOOTER -->
+    <!-- ===================== -->
     <footer>
         <div class="footer-content-left">
-            <a href="https://github.com/pablo-1312/javafundamentals">
-                <img src="twitter-circle-svprego-com.svg" alt="GitHub icon" class="footer-icon-style">
+            <a href="https://github.com/pablo-1312/javafundamentals" target="_blank" rel="noopener">
+                <img src="../images/github.svg" alt="GitHub profile" class="footer-icon-style" />
             </a>
-            <a href="https://github.com/pablo-1312/javafundamentals">
-                <img src="twitter-logo.svg" alt="Twitter logo" class="footer-icon-style">
+            <a href="https://twitter.com" target="_blank" rel="noopener">
+                <img src="../images/twitter-logo.svg" alt="Twitter logo" class="footer-icon-style" />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">
+                <img src="../images/linkedin.svg" alt="LinkedIn logo" class="footer-icon-style" />
             </a>
         </div>
 
         <div class="footer-content-right">
             <a href="/">Home</a>
-            <a href="#about-me-column-21">About</a>
+            <a href="#about-me-section">About</a>
+            <a href="#projects-section">Projects</a>
         </div>
     </footer>
 </body>
 </html>
+
