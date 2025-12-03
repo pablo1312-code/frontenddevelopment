@@ -1,0 +1,26 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+.logo{ 
+    max-width: 10vw;
+    min-width: 3vw;
+}
+/* > is direct child selector*/
+nav>ul{
+    border: 2px solid black;
+    list-style: none;
+    /* "display" is a property used to organize a group of elements */
+    /* "flex" is a one dimensional display style, which 
+    distribute the elements inside the flex container along
+    the main axis*/
+    display: flex;
+    /* choose the main axis direction along which the flex items 
+    are positioned */
+    flex-direction: row;
+    justify-content: center;
+}
+nav>ul>a{
+    margin: 4vw;
+}
