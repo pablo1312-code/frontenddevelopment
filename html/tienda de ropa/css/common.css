@@ -19,8 +19,20 @@ nav>ul{
     /* choose the main axis direction along which the flex items 
     are positioned */
     flex-direction: row;
-    justify-content: center;
+    /* Choose the way to distribute the flex items along the main axis */
+    /*center/flex-start/flex-end/space-around/space-evenly/space-between*/
+    justify-content: space-around;
+    /* This property is used to align the group of 
+    flex items along the cross axis*/
+    align-items: center;
+
+    /*We use this attribute to control how the elements
+    are shown when they surpass the width of the container.
+    "nowrap" means the element can overflow the edge of 
+    the container*/
+    flex-wrap: wrap;
 }
 nav>ul>a{
     margin: 4vw;
+    width: 10vw;
 }

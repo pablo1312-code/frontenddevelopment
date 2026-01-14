@@ -1,0 +1,125 @@
+/* 
+  Se aplica a todos los elementos.
+  Elimina márgenes y rellenos por defecto del navegador
+  y hace que el tamaño incluya bordes y padding.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Fuente general del sitio */
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    height: 100vh;
+    /* Altura igual a toda la pantalla */
+    background: linear-gradient(120deg, #2980b9, #6dd5fa);
+    /* Fondo degradado */
+
+    /* Flexbox para centrar el login */
+    display: flex;
+    justify-content: center;
+    /* Centrado horizontal */
+    align-items: center;
+    /* Centrado vertical */
+}
+
+/* Tarjeta que contiene el formulario */
+
+.login-container {
+    background: white;
+    width: 100%;
+    /* Ocupa todo el ancho posible */
+    max-width: 350px;
+    /* Pero nunca más de 350px */
+    padding: 40px 30px;
+    /* Espacio interno */
+    border-radius: 12px;
+    /* Bordes redondeados */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    /* Sombra para efecto de tarjeta */
+}
+
+/* Título del formulario */
+.login-form h2 {
+    text-align: center;
+    /* Centra el texto */
+    margin-bottom: 25px;
+    /* Espacio inferior */
+    color: #333;
+    /* Gris oscuro */
+}
+
+.input-group {
+    margin-bottom: 20px;
+    /* Separación entre campos */
+}
+
+/* Etiquetas de los campos */
+.input-group label {
+    display: block;
+    /* Ocupa toda la línea */
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Campos de entrada */
+.input-group input {
+    width: 100%;
+    /* Ocupan todo el ancho del contenedor */
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* Botón principal */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #2980b9;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    /* Cambia el cursor a mano */
+    transition: 0.3s;
+    /* Animación suave */
+}
+
+/* Efecto visual al pasar el mouse */
+button:hover {
+    background: #1f6391;
+}
+
+/* Contenedor de enlaces */
+.links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+/* Enlaces */
+.links a {
+    display: block;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #2980b9;
+    font-size: 14px;
+}
+
+/* Subrayado al pasar el mouse */
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .login-container {
+        margin: 0 10px;
+    }
+}
