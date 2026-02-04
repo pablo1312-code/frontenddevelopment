@@ -1,0 +1,12 @@
+*{
+    background-color: blue;
+    font-family: cursive;
+}
+/*we use media query the parameters related with this
+*/
+
+/*the following media query means that if the width of the screen is 
+less than 400px, new background and font will be applied. */
+@media screen and (width <350px) {
+    
+}

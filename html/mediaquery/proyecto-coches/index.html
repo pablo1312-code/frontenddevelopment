@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Define el tipo de documento como HTML5 -->
+<html lang="es">
+<head>
+    <!-- Configura la codificación de caracteres para soportar acentos y ñ -->
+    <meta charset="UTF-8">
+
+    <!-- Permite que la web sea responsive en móviles y tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Mundo Coches</title>
+
+    <!-- Enlace al archivo CSS externo donde está el diseño -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Contenedor principal que organiza toda la página -->
+    <div class="layout">
+
+        <!-- ================= HEADER ================= -->
+        <!-- Encabezado principal con el título y el menú de navegación -->
+        <header class="header">
+            <h1>Mundo Coches</h1>
+
+            <!-- Menú de navegación principal -->
+            <nav class="nav">
+                <a href="#">Inicio</a>
+                <a href="#">Modelos</a>
+                <a href="#">Galería</a>
+                <a href="#">Contacto</a>
+            </nav>
+        </header>
+
+        <!-- ================= ASIDE ================= -->
+        <!-- Barra lateral con categorías de coches -->
+        <aside class="aside">
+            <h2>Categorías</h2>
+
+            <!-- Lista de tipos de coches -->
+            <ul>
+                <li>Deportivos</li>
+                <li>Eléctricos</li>
+                <li>Clásicos</li>
+                <li>SUV</li>
+            </ul>
+        </aside>
+
+        <!-- ================= MAIN ================= -->
+        <!-- Contenido principal de la página -->
+        <main class="main">
+
+            <!-- Sección que agrupa todas las tarjetas de coches -->
+            <section class="cards">
+
+                <!-- Tarjeta individual de un coche deportivo -->
+                <article class="card">
+                    <!-- Imagen del coche deportivo -->
+                    <img src="images/739686592_230712461_1706x960.webp" alt="Coche deportivo">
+
+                    <!-- Título de la tarjeta -->
+                    <h3>Coche Deportivo</h3>
+
+                    <!-- Descripción breve del coche -->
+                    <p>Alta velocidad, diseño aerodinámico y máxima potencia.</p>
+
+                    <!-- Botón para ampliar información -->
+                    <button>Ver más</button>
+                </article>
+
+                <!-- Tarjeta de un coche eléctrico -->
+                <article class="card">
+                    <img src="images/f.elconfidencial.com_original_542_921_216_542921216fbf3ca95ff6b1455a1e2c9f.jpg" alt="Coche eléctrico">
+                    <h3>Coche Eléctrico</h3>
+                    <p>Innovación, eficiencia energética y cero emisiones.</p>
+                    <button>Ver más</button>
+                </article>
+
+                <!-- Tarjeta de un coche clásico -->
+                <article class="card">
+                    <img src="images/ford-mustang.webp" alt="Coche clásico">
+                    <h3>Coche Clásico</h3>
+                    <p>Elegancia atemporal y espíritu vintage.</p>
+                    <button>Ver más</button>
+                </article>
+
+            </section>
+        </main>
+
+        <!-- ================= FOOTER ================= -->
+        <!-- Pie de página con información legal o del proyecto -->
+        <footer class="footer">
+            <p>© 2026 Mundo Coches - Proyecto Educativo</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

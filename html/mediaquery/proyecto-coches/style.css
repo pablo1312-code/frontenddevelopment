@@ -1,0 +1,252 @@
+/* ===================== RESET ===================== */
+/* Elimina márgenes y rellenos por defecto del navegador
+   y asegura que el tamaño incluya bordes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===================== VARIABLES DE COLOR ===================== */
+/* Variables globales para mantener una paleta de colores consistente
+   y facilitar cambios futuros */
+:root {
+    --rojo: #e10600;
+    --negro: #111;
+    --gris-oscuro: #1c1c1c;
+    --gris-claro: #f2f2f2;
+    --blanco: #ffffff;
+}
+
+/* ===================== BASE ===================== */
+/* Tamaño base de fuente para trabajar con rem */
+html {
+    font-size: 16px;
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--gris-claro);
+    /* Evita el scroll horizontal accidental */
+    overflow-x: hidden;
+}
+
+/* ===================== GRID GENERAL ===================== */
+/* Estructura principal de la página usando CSS Grid */
+.layout {
+    display: grid;
+
+    /* Definición de las áreas del layout */
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+
+    /* Columna lateral fija y contenido principal flexible */
+    grid-template-columns: 18vw 1fr;
+
+    /* Altura mínima de toda la ventana */
+    min-height: 100vh;
+}
+
+/* ===================== HEADER ===================== */
+/* Encabezado superior de la página */
+.header {
+    grid-area: header;
+    /* Fondo degradado para mayor impacto visual */
+    background: linear-gradient(90deg, var(--negro), var(--rojo));
+    color: var(--blanco);
+    padding: 2vh 3vw;
+
+    /* Organización vertical del contenido */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Título principal */
+.header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+/* Menú de navegación */
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Enlaces del menú */
+.nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+}
+
+/* Línea animada bajo los enlaces */
+.nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--blanco);
+    bottom: -4px;
+    left: 0;
+    transition: 0.3s;
+}
+
+/* Animación al pasar el ratón */
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* ===================== ASIDE ===================== */
+/* Barra lateral de categorías */
+.aside {
+    grid-area: aside;
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+    padding: 2rem;
+}
+
+/* Título del aside */
+.aside h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--rojo);
+}
+
+/* Lista sin viñetas */
+.aside ul {
+    list-style: none;
+}
+
+/* Elementos de la lista */
+.aside li {
+    padding: 0.6rem 0;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Efecto hover en categorías */
+.aside li:hover {
+    color: var(--rojo);
+}
+
+/* ===================== MAIN ===================== */
+/* Área principal del contenido */
+.main {
+    grid-area: main;
+    padding: 2.5rem;
+}
+
+/* ===================== TARJETAS ===================== */
+/* Contenedor de tarjetas con Flexbox */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+/* Tarjeta individual */
+.card {
+    background-color: var(--blanco);
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    /* Organización vertical del contenido */
+    display: flex;
+    flex-direction: column;
+
+    /* Transiciones suaves */
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    /* Sombra para efecto de elevación */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Efecto al pasar el ratón por la tarjeta */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.25);
+}
+
+/* Imagen de la tarjeta */
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+/* Título de la tarjeta */
+.card h3 {
+    font-size: 1.4rem;
+    margin: 1rem;
+    color: var(--negro);
+}
+
+/* Texto descriptivo */
+.card p {
+    font-size: 0.95rem;
+    margin: 0 1rem 1rem;
+    color: #555;
+}
+
+/* Botón de acción */
+.card button {
+    margin: 1rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Cambio de color al pasar el ratón */
+.card button:hover {
+    background-color: #b80500;
+}
+
+/* ===================== FOOTER ===================== */
+/* Pie de página */
+.footer {
+    grid-area: footer;
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* ===================== RESPONSIVE ===================== */
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 900px) {
+
+    /* El layout pasa a una sola columna */
+    .layout {
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    /* Centra el contenido del aside */
+    .aside {
+        text-align: center;
+    }
+
+    /* El menú se adapta a varias líneas */
+    .nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
